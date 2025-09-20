@@ -36,6 +36,7 @@ for i in range(8):
             row += 'o'
     print(row)
 
+# In-class example using copilot with comment prompt
 print("\nCopilot example for exercise 2:")
 # create a nested loop that generates a 5x5 grid of coordinates
 for y in range(5):
@@ -68,6 +69,60 @@ for i in range(res_y):
     row = ''
     for j in range(res_x):
         if (i+j)%2 == 0:
+            row += 'o'
+        else:
+            row += '.'
+    print(row)
+
+# Exercise 5: print a pattern of randomly selected forward or back slashes
+print("\nexercise 5:")
+
+res_x = 24
+res_y = 8
+import random
+
+for i in range(res_y):
+    row = ''
+    for j in range(res_x):
+        if random.random() > 0.5:
+            row += '/'
+        else:
+            row += '\\'
+    print(row)
+
+# Exercise 6: print a pattern of random o's and .'s with a gradient along the x-axis
+print("\nexercise 6:")
+
+res_x = 24
+res_y = 8
+
+import random
+
+for i in range(res_y):
+    row = ''
+    for j in range(res_x):
+        if random.random() > (j/res_x):
+            row += '.'
+        else:
+            row += 'o'
+    print(row)
+
+# Exercise Bonus: print a pattern of random o's and .'s with a radial gradient from the center
+print("\nexercise bonus:")
+
+res_x = 50
+res_y = 20
+center_x = res_x / 2
+center_y = res_y / 2
+#max_dist = ((center_x)**2 + (center_y)**2)**0.5 # Pythagorean theorem
+max_dist = 15
+import random
+
+for i in range(res_y):
+    row = ''
+    for j in range(res_x):
+        dist = ((j - center_x)**2 + (i - center_y)**2)**0.5
+        if random.random() > (dist/max_dist):
             row += 'o'
         else:
             row += '.'
