@@ -18,7 +18,7 @@ this_dir = os.path.dirname(os.path.abspath(__file__))
 #TODO_______________________parameters to set (only edit here)
 #the input text file to train the model on
 #input_text_file = "ruskin_7_lamps.txt"
-input_text_file = "Week4/scripts/vitruvius_10_books.txt"
+input_text_file = "Week4/scripts/the_origin_of_species.txt"
 #the output file name for the model. the extension .kv is signifies a keyed vector file (that is a word2vec dictionary that maps words to vectors)
 output_file = input_text_file.replace('.txt', '.kv')
 #the size of the word vectors. the higher the number the more accurate the model is (sort of more semantic resolution, differentiating distinct direcitons in the embedding vector space), but also the more computationally expensive and memory intensive when loaded
